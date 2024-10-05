@@ -19,26 +19,19 @@ def load_data():
         st.write("Preview of the data:")
         st.write(data.head())
         
+        # Column selection
+        data = select_columns(data)
+        
         # Option to save the uploaded file
         if st.button("Save Uploaded File"):
-            saved_filename = save_uploaded_file(uploaded_file)
+            saved_filename = save_uploaded_file(data)
             st.session_state.uploaded_files.append(saved_filename)
-        
-        # Column selection for custom DataFrame
-        st.subheader("Create Custom DataFrame")
-        selected_columns = st.multiselect("Select columns for your custom DataFrame", data.columns.tolist())
-        
-        if selected_columns:
-            custom_df = data[selected_columns]
-            st.write("Preview of your custom DataFrame:")
-            st.write(custom_df.head())
-            return custom_df
         
         return data
     
     return None
 
-def save_uploaded_file(uploadedfile):
+def save_uploaded_file(data):
     # Create a 'saved_files' directory if it doesn't exist
     if not os.path.exists(UPLOAD_DIRECTORY):
         os.makedirs(UPLOAD_DIRECTORY)
@@ -49,8 +42,7 @@ def save_uploaded_file(uploadedfile):
     file_path = os.path.join(UPLOAD_DIRECTORY, file_name)
     
     # Save the file
-    with open(file_path, "wb") as f:
-        f.write(uploadedfile.getbuffer())
+    data.to_csv(file_path, index=False)
     
     st.success(f"File saved as {file_name}")
     return file_name
@@ -65,10 +57,6 @@ def load_saved_file():
         st.warning("No saved files found.")
         return None
 
-    # Display list of saved files
-    st.write("Saved CSV files:")
-    for file in saved_files:
-        st.write(f"- {file}")
 
     # Let user select a file
     selected_file = st.selectbox("Choose a file to load", saved_files)
@@ -76,11 +64,36 @@ def load_saved_file():
     if selected_file:
         file_path = os.path.join(UPLOAD_DIRECTORY, selected_file)
         data = pd.read_csv(file_path)
-        st.write("Preview of the selected file:")
-        st.write(data.head())
+
+        # Display the first few rows of the data
+        st.write("Preview of the data:")
+        st.write(data.head())   
+        
+        # Column selection
+        data = select_columns(data)
+        
         return data
 
     return None
+
+def select_columns(df):
+    st.subheader("Select Columns")
+    
+    select_all = ["Select All"]
+    full_columns = select_all + df.columns.tolist()
+    
+    columns = st.multiselect("Select the columns", full_columns)
+    
+    if "Select All" in columns or not columns:
+        selected_df = df
+    else:
+        selected_df = df[columns]
+    
+    # Display the DataFrame
+    st.write("Preview of selected data:")
+    st.dataframe(selected_df.head(), use_container_width=True)
+    
+    return selected_df
 
 # Initialize session state
 def init_session_state():
