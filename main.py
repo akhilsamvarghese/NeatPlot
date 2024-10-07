@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from src.data_loader import load_data, load_saved_file, init_session_state, list_saved_files
 from src.data_processor import process_data
+from src.data_visualization import visualize_data
 
 # Set page config at the very beginning
 st.set_page_config(page_title="NeatPlot", page_icon="📊", layout="wide")
@@ -14,7 +15,7 @@ with st.sidebar:
     st.title("Navigation")
     selected = option_menu(
         menu_title=None,
-        options=["Getting Data", "Processing Data", "Visualise Data", "Feature Engineering"],
+        options=["Getting Data", "Processing Data", "Visualise Data", "Feature Engineering (Work in Progress)"],
         icons=['cloud-upload', 'list-task', 'bar-chart-fill', 'gear'],
         menu_icon="cast",
         default_index=0,
@@ -57,13 +58,20 @@ def main():
         else:
             st.warning("Please load data first.")
 
+    # elif selected == "Visualise Data":
+    #     st.header("Data Visualization")
+    #     if st.session_state.data is not None:
+    #         # Add your data visualization logic here
+    #         st.write("Visualization placeholder")
+    #     else:
+    #         st.warning("Please load and process data first.")
     elif selected == "Visualise Data":
-        st.header("Data Visualization")
         if st.session_state.data is not None:
-            # Add your data visualization logic here
-            st.write("Visualization placeholder")
+            visualize_data(st.session_state.data)  # Call the new visualization function
         else:
             st.warning("Please load and process data first.")
+
+
 
     elif selected == "Feature Engineering":
         st.header("Feature Engineering")

@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from datetime import datetime
+import chardet
 
 UPLOAD_DIRECTORY = "saved_files"
 
@@ -12,21 +13,40 @@ def load_data():
     uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
     
     if uploaded_file is not None:
-        # Read the CSV file
-        data = pd.read_csv(uploaded_file)
+        try:
+            # Detect the file encoding
+            raw_data = uploaded_file.read()
+            detected_encoding = chardet.detect(raw_data)['encoding']
+            
+            # Reset the file pointer to the beginning
+            uploaded_file.seek(0)
+            
+            # Try to read the CSV file with the detected encoding
+            data = pd.read_csv(uploaded_file, encoding=detected_encoding)
+            
+            # Display the first few rows of the data
+            st.write("Preview of the data:")
+            st.write(data.head())
+            
+            # Option to save the uploaded file
+            if st.button("Save Uploaded File"):
+                saved_filename = save_uploaded_file(data)
+                st.session_state.uploaded_files.append(saved_filename)
+            
+            return data
         
-        # Display the first few rows of the data
-        st.write("Preview of the data:")
-        st.write(data.head())
-        
-        # Option to save the uploaded file
-        if st.button("Save Uploaded File"):
-            saved_filename = save_uploaded_file(data)
-            st.session_state.uploaded_files.append(saved_filename)
-        
-        return data
+        except UnicodeDecodeError:
+            st.error("Error: Unable to decode the file. The file might be corrupted or using an unsupported encoding.")
+        except pd.errors.EmptyDataError:
+            st.error("Error: The file is empty.")
+        except pd.errors.ParserError:
+            st.error("Error: Unable to parse the file. Please make sure it's a valid CSV file.")
+        except Exception as e:
+            st.error(f"An unexpected error occurred: {str(e)}")
     
     return None
+
+
 
 def save_uploaded_file(data):
     # Create a 'saved_files' directory if it doesn't exist
