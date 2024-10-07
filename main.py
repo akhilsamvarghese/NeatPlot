@@ -1,5 +1,7 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 from src.data_loader import load_data, load_saved_file, init_session_state, list_saved_files
+from src.data_processor import process_data
 
 # Set page config at the very beginning
 st.set_page_config(page_title="Data Science App", page_icon="🧊", layout="wide")
@@ -7,18 +9,23 @@ st.set_page_config(page_title="Data Science App", page_icon="🧊", layout="wide
 # Initialize session state
 init_session_state()
 
-# Sidebar for navigation
-st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Getting Data", "Processing Data", "Visualise Data", "Feature Engineering"])
+# Sidebar navigation with option_menu
+with st.sidebar:
+    st.title("Navigation")
+    selected = option_menu(
+        menu_title=None,
+        options=["Getting Data", "Processing Data", "Visualise Data", "Feature Engineering"],
+        icons=['cloud-upload', 'list-task', 'bar-chart-fill', 'gear'],
+        menu_icon="cast",
+        default_index=0,
+    )
 
 # Main app logic
 def main():
-    if page == "Getting Data":
+    if selected == "Getting Data":
         st.title("Data Loading")
-        
         # Option to upload new file or load saved file
         data_source = st.radio("Choose data source", ["Upload New File", "Load Saved File"])
-        
         if data_source == "Upload New File":
             st.session_state.data = load_data()
         else:
@@ -31,19 +38,17 @@ def main():
                 st.session_state.data = load_saved_file()
             else:
                 st.warning("No saved files found.")
-        
         if st.session_state.data is not None:
             st.success("Data loaded successfully!")
 
-    elif page == "Processing Data":
+    elif selected == "Processing Data":
         st.title("Data Processing")
         if st.session_state.data is not None:
-            # Add your data processing logic here
-            st.write(st.session_state.data.head())
+            st.session_state.data = process_data(st.session_state.data)
         else:
             st.warning("Please load data first.")
 
-    elif page == "Visualise Data":
+    elif selected == "Visualise Data":
         st.title("Data Visualization")
         if st.session_state.data is not None:
             # Add your data visualization logic here
@@ -51,7 +56,7 @@ def main():
         else:
             st.warning("Please load and process data first.")
 
-    elif page == "Feature Engineering":
+    elif selected == "Feature Engineering":
         st.title("Feature Engineering")
         if st.session_state.data is not None:
             # Add your feature engineering logic here
