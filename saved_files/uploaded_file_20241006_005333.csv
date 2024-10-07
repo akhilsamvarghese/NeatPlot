@@ -1,0 +1,701 @@
+Segment,Country, Product , Discount Band , Units Sold 
+Government,Canada, Carretera , None ," $1,618.50 "
+Government,Germany, Carretera , None ," $1,321.00 "
+Midmarket,France, Carretera , None ," $2,178.00 "
+Midmarket,Germany, Carretera , None , $888.00 
+Midmarket,Mexico, Carretera , None ," $2,470.00 "
+Government,Germany, Carretera , None ," $1,513.00 "
+Midmarket,Germany, Montana , None , $921.00 
+Channel Partners,Canada, Montana , None ," $2,518.00 "
+Government,France, Montana , None ," $1,899.00 "
+Channel Partners,Germany, Montana , None ," $1,545.00 "
+Midmarket,Mexico, Montana , None ," $2,470.00 "
+Enterprise,Canada, Montana , None ," $2,665.50 "
+Small Business,Mexico, Montana , None , $958.00 
+Government,Germany, Montana , None ," $2,146.00 "
+Enterprise,Canada, Montana , None , $345.00 
+Midmarket,United States of America, Montana , None , $615.00 
+Government,Canada, Paseo , None , $292.00 
+Midmarket,Mexico, Paseo , None , $974.00 
+Channel Partners,Canada, Paseo , None ," $2,518.00 "
+Government,Germany, Paseo , None ," $1,006.00 "
+Channel Partners,Germany, Paseo , None , $367.00 
+Government,Mexico, Paseo , None , $883.00 
+Midmarket,France, Paseo , None , $549.00 
+Small Business,Mexico, Paseo , None , $788.00 
+Midmarket,Mexico, Paseo , None ," $2,472.00 "
+Government,United States of America, Paseo , None ," $1,143.00 "
+Government,Canada, Paseo , None ," $1,725.00 "
+Channel Partners,United States of America, Paseo , None , $912.00 
+Midmarket,Canada, Paseo , None ," $2,152.00 "
+Government,Canada, Paseo , None ," $1,817.00 "
+Government,Germany, Paseo , None ," $1,513.00 "
+Government,Mexico, Velo , None ," $1,493.00 "
+Enterprise,France, Velo , None ," $1,804.00 "
+Channel Partners,Germany, Velo , None ," $2,161.00 "
+Government,Germany, Velo , None ," $1,006.00 "
+Channel Partners,Germany, Velo , None ," $1,545.00 "
+Enterprise,United States of America, Velo , None ," $2,821.00 "
+Enterprise,Canada, Velo , None , $345.00 
+Small Business,Canada, VTT , None ," $2,001.00 "
+Channel Partners,Germany, VTT , None ," $2,838.00 "
+Midmarket,France, VTT , None ," $2,178.00 "
+Midmarket,Germany, VTT , None , $888.00 
+Government,France, VTT , None ," $1,527.00 "
+Small Business,France, VTT , None ," $2,151.00 "
+Government,Canada, VTT , None ," $1,817.00 "
+Government,France, Amarilla , None ," $2,750.00 "
+Channel Partners,United States of America, Amarilla , None ," $1,953.00 "
+Enterprise,Germany, Amarilla , None ," $4,219.50 "
+Government,France, Amarilla , None ," $1,899.00 "
+Government,Germany, Amarilla , None ," $1,686.00 "
+Channel Partners,United States of America, Amarilla , None ," $2,141.00 "
+Government,United States of America, Amarilla , None ," $1,143.00 "
+Midmarket,United States of America, Amarilla , None , $615.00 
+Government,France, Paseo , Low ," $3,945.00 "
+Midmarket,France, Paseo , Low ," $2,296.00 "
+Government,France, Paseo , Low ," $1,030.00 "
+Government,France, Velo , Low , $639.00 
+Government,Canada, VTT , Low ," $1,326.00 "
+Channel Partners,United States of America, Carretera , Low ," $1,858.00 "
+Government,Mexico, Carretera , Low ," $1,210.00 "
+Government,United States of America, Carretera , Low ," $2,529.00 "
+Channel Partners,Canada, Carretera , Low ," $1,445.00 "
+Enterprise,United States of America, Carretera , Low , $330.00 
+Channel Partners,France, Carretera , Low ," $2,671.00 "
+Channel Partners,Germany, Carretera , Low , $766.00 
+Small Business,Mexico, Carretera , Low , $494.00 
+Government,Mexico, Carretera , Low ," $1,397.00 "
+Government,France, Carretera , Low ," $2,155.00 "
+Midmarket,Mexico, Montana , Low ," $2,214.00 "
+Small Business,United States of America, Montana , Low ," $2,301.00 "
+Government,France, Montana , Low ," $1,375.50 "
+Government,Canada, Montana , Low ," $1,830.00 "
+Small Business,United States of America, Montana , Low ," $2,498.00 "
+Enterprise,United States of America, Montana , Low , $663.00 
+Midmarket,United States of America, Paseo , Low ," $1,514.00 "
+Government,United States of America, Paseo , Low ," $4,492.50 "
+Enterprise,United States of America, Paseo , Low , $727.00 
+Enterprise,France, Paseo , Low , $787.00 
+Enterprise,Mexico, Paseo , Low ," $1,823.00 "
+Midmarket,Germany, Paseo , Low , $747.00 
+Channel Partners,Germany, Paseo , Low , $766.00 
+Small Business,United States of America, Paseo , Low ," $2,905.00 "
+Government,France, Paseo , Low ," $2,155.00 "
+Government,France, Velo , Low ," $3,864.00 "
+Government,Mexico, Velo , Low , $362.00 
+Enterprise,Canada, Velo , Low , $923.00 
+Enterprise,United States of America, Velo , Low , $663.00 
+Government,Canada, Velo , Low ," $2,092.00 "
+Government,Germany, VTT , Low , $263.00 
+Government,Canada, VTT , Low , $943.50 
+Enterprise,United States of America, VTT , Low , $727.00 
+Enterprise,France, VTT , Low , $787.00 
+Small Business,Germany, VTT , Low , $986.00 
+Small Business,Mexico, VTT , Low , $494.00 
+Government,Mexico, VTT , Low ," $1,397.00 "
+Enterprise,France, VTT , Low ," $1,744.00 "
+Channel Partners,United States of America, Amarilla , Low ," $1,989.00 "
+Midmarket,France, Amarilla , Low , $321.00 
+Enterprise,Canada, Carretera , Low , $742.50 
+Channel Partners,Canada, Carretera , Low ," $1,295.00 "
+Small Business,Germany, Carretera , Low , $214.00 
+Government,France, Carretera , Low ," $2,145.00 "
+Government,Canada, Carretera , Low ," $2,852.00 "
+Channel Partners,United States of America, Montana , Low ," $1,142.00 "
+Government,United States of America, Montana , Low ," $1,566.00 "
+Channel Partners,Mexico, Montana , Low , $690.00 
+Enterprise,Mexico, Montana , Low ," $1,660.00 "
+Midmarket,Canada, Paseo , Low ," $2,363.00 "
+Small Business,France, Paseo , Low , $918.00 
+Small Business,Germany, Paseo , Low ," $1,728.00 "
+Channel Partners,United States of America, Paseo , Low ," $1,142.00 "
+Enterprise,Mexico, Paseo , Low , $662.00 
+Channel Partners,Canada, Paseo , Low ," $1,295.00 "
+Enterprise,Germany, Paseo , Low , $809.00 
+Enterprise,Mexico, Paseo , Low ," $2,145.00 "
+Channel Partners,France, Paseo , Low ," $1,785.00 "
+Small Business,Canada, Paseo , Low ," $1,916.00 "
+Government,Canada, Paseo , Low ," $2,852.00 "
+Enterprise,Canada, Paseo , Low ," $2,729.00 "
+Midmarket,United States of America, Paseo , Low ," $1,925.00 "
+Government,United States of America, Paseo , Low ," $2,013.00 "
+Channel Partners,France, Paseo , Low ," $1,055.00 "
+Channel Partners,Mexico, Paseo , Low ," $1,084.00 "
+Government,United States of America, Velo , Low ," $1,566.00 "
+Government,Germany, Velo , Low ," $2,966.00 "
+Government,Germany, Velo , Low ," $2,877.00 "
+Enterprise,Germany, Velo , Low , $809.00 
+Enterprise,Mexico, Velo , Low ," $2,145.00 "
+Channel Partners,France, Velo , Low ," $1,055.00 "
+Government,Mexico, Velo , Low , $544.00 
+Channel Partners,Mexico, Velo , Low ," $1,084.00 "
+Enterprise,Mexico, VTT , Low , $662.00 
+Small Business,Germany, VTT , Low , $214.00 
+Government,Germany, VTT , Low ," $2,877.00 "
+Enterprise,Canada, VTT , Low ," $2,729.00 "
+Government,United States of America, VTT , Low , $266.00 
+Government,Mexico, VTT , Low ," $1,940.00 "
+Small Business,Germany, Amarilla , Low , $259.00 
+Small Business,Mexico, Amarilla , Low ," $1,101.00 "
+Enterprise,Germany, Amarilla , Low ," $2,276.00 "
+Government,Germany, Amarilla , Low ," $2,966.00 "
+Government,United States of America, Amarilla , Low ," $1,236.00 "
+Government,France, Amarilla , Low , $941.00 
+Small Business,Canada, Amarilla , Low ," $1,916.00 "
+Enterprise,France, Carretera , Low ," $4,243.50 "
+Government,Germany, Carretera , Low ," $2,580.00 "
+Small Business,Germany, Carretera , Low , $689.00 
+Channel Partners,United States of America, Carretera , Low ," $1,947.00 "
+Channel Partners,Canada, Carretera , Low , $908.00 
+Government,Germany, Montana , Low ," $1,958.00 "
+Channel Partners,France, Montana , Low ," $1,901.00 "
+Government,France, Montana , Low , $544.00 
+Government,Germany, Montana , Low ," $1,797.00 "
+Enterprise,France, Montana , Low ," $1,287.00 "
+Enterprise,Germany, Montana , Low ," $1,706.00 "
+Small Business,France, Paseo , Low ," $2,434.50 "
+Enterprise,Canada, Paseo , Low ," $1,774.00 "
+Channel Partners,France, Paseo , Low ," $1,901.00 "
+Small Business,Germany, Paseo , Low , $689.00 
+Enterprise,Germany, Paseo , Low ," $1,570.00 "
+Channel Partners,United States of America, Paseo , Low ," $1,369.50 "
+Enterprise,Canada, Paseo , Low ," $2,009.00 "
+Midmarket,Germany, Paseo , Low ," $1,945.00 "
+Enterprise,France, Paseo , Low ," $1,287.00 "
+Enterprise,Germany, Paseo , Low ," $1,706.00 "
+Enterprise,Canada, Velo , Low ," $2,009.00 "
+Small Business,United States of America, VTT , Low ," $2,844.00 "
+Channel Partners,Mexico, VTT , Low ," $1,916.00 "
+Enterprise,Germany, VTT , Low ," $1,570.00 "
+Small Business,Canada, VTT , Low ," $1,874.00 "
+Government,Mexico, VTT , Low ," $1,642.00 "
+Midmarket,Germany, VTT , Low ," $1,945.00 "
+Government,Canada, Carretera , Low , $831.00 
+Government,Mexico, Paseo , Low ," $1,760.00 "
+Government,Canada, Velo , Low ," $3,850.50 "
+Channel Partners,Germany, VTT , Low ," $2,479.00 "
+Midmarket,Mexico, Montana , Low ," $2,031.00 "
+Midmarket,Mexico, Paseo , Low ," $2,031.00 "
+Midmarket,France, Paseo , Low ," $2,261.00 "
+Government,United States of America, Velo , Low , $736.00 
+Government,Canada, Carretera , Low ," $2,851.00 "
+Small Business,Germany, Carretera , Low ," $2,021.00 "
+Government,United States of America, Carretera , Low , $274.00 
+Midmarket,Canada, Montana , Low ," $1,967.00 "
+Small Business,Germany, Montana , Low ," $1,859.00 "
+Government,Canada, Montana , Low ," $2,851.00 "
+Small Business,Germany, Montana , Low ," $2,021.00 "
+Enterprise,Mexico, Montana , Low ," $1,138.00 "
+Government,Canada, Paseo , Low ," $4,251.00 "
+Enterprise,Germany, Paseo , Low , $795.00 
+Small Business,Germany, Paseo , Low ," $1,414.50 "
+Small Business,United States of America, Paseo , Low ," $2,918.00 "
+Government,United States of America, Paseo , Low ," $3,450.00 "
+Enterprise,France, Paseo , Low ," $2,988.00 "
+Midmarket,Canada, Paseo , Low , $218.00 
+Government,Canada, Paseo , Low ," $2,074.00 "
+Government,United States of America, Paseo , Low ," $1,056.00 "
+Midmarket,United States of America, Paseo , Low , $671.00 
+Midmarket,Mexico, Paseo , Low ," $1,514.00 "
+Government,United States of America, Paseo , Low , $274.00 
+Enterprise,Mexico, Paseo , Low ," $1,138.00 "
+Channel Partners,United States of America, Velo , Low ," $1,465.00 "
+Government,Canada, Velo , Low ," $2,646.00 "
+Government,France, Velo , Low ," $2,177.00 "
+Channel Partners,France, VTT , Low , $866.00 
+Government,United States of America, VTT , Low , $349.00 
+Government,France, VTT , Low ," $2,177.00 "
+Midmarket,Mexico, VTT , Low ," $1,514.00 "
+Government,Mexico, Amarilla , Low ," $1,865.00 "
+Enterprise,Mexico, Amarilla , Low ," $1,074.00 "
+Government,Germany, Amarilla , Low ," $1,907.00 "
+Midmarket,United States of America, Amarilla , Low , $671.00 
+Government,Canada, Amarilla , Low ," $1,778.00 "
+Government,Germany, Montana , Medium ," $1,159.00 "
+Government,Germany, Paseo , Medium ," $1,372.00 "
+Government,Canada, Paseo , Medium ," $2,349.00 "
+Government,Mexico, Paseo , Medium ," $2,689.00 "
+Channel Partners,Canada, Paseo , Medium ," $2,431.00 "
+Channel Partners,Canada, Velo , Medium ," $2,431.00 "
+Government,Mexico, VTT , Medium ," $2,689.00 "
+Government,Mexico, Amarilla , Medium ," $1,683.00 "
+Channel Partners,Mexico, Amarilla , Medium ," $1,123.00 "
+Government,Germany, Amarilla , Medium ," $1,159.00 "
+Channel Partners,France, Carretera , Medium ," $1,865.00 "
+Channel Partners,Germany, Carretera , Medium ," $1,116.00 "
+Government,France, Carretera , Medium ," $1,563.00 "
+Small Business,United States of America, Carretera , Medium , $991.00 
+Government,Germany, Carretera , Medium ," $1,016.00 "
+Midmarket,Mexico, Carretera , Medium ," $2,791.00 "
+Government,United States of America, Carretera , Medium , $570.00 
+Government,France, Carretera , Medium ," $2,487.00 "
+Government,France, Montana , Medium ," $1,384.50 "
+Enterprise,United States of America, Montana , Medium ," $3,627.00 "
+Government,Mexico, Montana , Medium , $720.00 
+Channel Partners,Germany, Montana , Medium ," $2,342.00 "
+Small Business,Mexico, Montana , Medium ," $1,100.00 "
+Government,France, Paseo , Medium ," $1,303.00 "
+Enterprise,United States of America, Paseo , Medium ," $2,992.00 "
+Enterprise,France, Paseo , Medium ," $2,385.00 "
+Small Business,Mexico, Paseo , Medium ," $1,607.00 "
+Government,United States of America, Paseo , Medium ," $2,327.00 "
+Small Business,United States of America, Paseo , Medium , $991.00 
+Government,United States of America, Paseo , Medium , $602.00 
+Midmarket,France, Paseo , Medium ," $2,620.00 "
+Government,Canada, Paseo , Medium ," $1,228.00 "
+Government,Canada, Paseo , Medium ," $1,389.00 "
+Enterprise,United States of America, Paseo , Medium , $861.00 
+Enterprise,France, Paseo , Medium , $704.00 
+Government,Canada, Paseo , Medium ," $1,802.00 "
+Government,United States of America, Paseo , Medium ," $2,663.00 "
+Government,France, Paseo , Medium ," $2,136.00 "
+Midmarket,Germany, Paseo , Medium ," $2,116.00 "
+Midmarket,United States of America, Velo , Medium , $555.00 
+Midmarket,Mexico, Velo , Medium ," $2,861.00 "
+Enterprise,Germany, Velo , Medium , $807.00 
+Government,United States of America, Velo , Medium , $602.00 
+Government,United States of America, Velo , Medium ," $2,832.00 "
+Government,France, Velo , Medium ," $1,579.00 "
+Enterprise,United States of America, Velo , Medium , $861.00 
+Enterprise,France, Velo , Medium , $704.00 
+Government,France, Velo , Medium ," $1,033.00 "
+Small Business,Germany, Velo , Medium ," $1,250.00 "
+Government,Canada, VTT , Medium ," $1,389.00 "
+Government,United States of America, VTT , Medium ," $1,265.00 "
+Government,Germany, VTT , Medium ," $2,297.00 "
+Government,United States of America, VTT , Medium ," $2,663.00 "
+Government,United States of America, VTT , Medium , $570.00 
+Government,France, VTT , Medium ," $2,487.00 "
+Government,Germany, Amarilla , Medium ," $1,350.00 "
+Government,Canada, Amarilla , Medium , $552.00 
+Government,Canada, Amarilla , Medium ," $1,228.00 "
+Small Business,Germany, Amarilla , Medium ," $1,250.00 "
+Midmarket,France, Paseo , Medium ," $3,801.00 "
+Government,United States of America, Carretera , Medium ," $1,117.50 "
+Midmarket,Canada, Carretera , Medium ," $2,844.00 "
+Channel Partners,Mexico, Carretera , Medium , $562.00 
+Channel Partners,Canada, Carretera , Medium ," $2,299.00 "
+Midmarket,United States of America, Carretera , Medium ," $2,030.00 "
+Government,United States of America, Carretera , Medium , $263.00 
+Enterprise,Germany, Carretera , Medium , $887.00 
+Government,Mexico, Montana , Medium , $980.00 
+Government,Germany, Montana , Medium ," $1,460.00 "
+Government,France, Montana , Medium ," $1,403.00 "
+Channel Partners,United States of America, Montana , Medium ," $2,723.00 "
+Government,France, Paseo , Medium ," $1,496.00 "
+Channel Partners,Canada, Paseo , Medium ," $2,299.00 "
+Government,United States of America, Paseo , Medium , $727.00 
+Enterprise,Canada, Velo , Medium , $952.00 
+Enterprise,United States of America, Velo , Medium ," $2,755.00 "
+Midmarket,Germany, Velo , Medium ," $1,530.00 "
+Government,France, Velo , Medium ," $1,496.00 "
+Government,Mexico, Velo , Medium ," $1,498.00 "
+Small Business,France, Velo , Medium ," $1,221.00 "
+Government,France, Velo , Medium ," $2,076.00 "
+Midmarket,Canada, VTT , Medium ," $2,844.00 "
+Government,Mexico, VTT , Medium ," $1,498.00 "
+Small Business,France, VTT , Medium ," $1,221.00 "
+Government,Mexico, VTT , Medium ," $1,123.00 "
+Small Business,Canada, VTT , Medium ," $2,436.00 "
+Enterprise,France, Amarilla , Medium ," $1,987.50 "
+Government,Mexico, Amarilla , Medium ," $1,679.00 "
+Government,United States of America, Amarilla , Medium , $727.00 
+Government,France, Amarilla , Medium ," $1,403.00 "
+Government,France, Amarilla , Medium ," $2,076.00 "
+Government,France, Montana , Medium ," $1,757.00 "
+Midmarket,United States of America, Paseo , Medium ," $2,198.00 "
+Midmarket,Germany, Paseo , Medium ," $1,743.00 "
+Midmarket,United States of America, Paseo , Medium ," $1,153.00 "
+Government,France, Paseo , Medium ," $1,757.00 "
+Government,Germany, Velo , Medium ," $1,001.00 "
+Government,Mexico, Velo , Medium ," $1,333.00 "
+Midmarket,United States of America, VTT , Medium ," $1,153.00 "
+Channel Partners,Mexico, Carretera , Medium , $727.00 
+Channel Partners,Canada, Carretera , Medium ," $1,884.00 "
+Government,Mexico, Carretera , Medium ," $1,834.00 "
+Channel Partners,Mexico, Montana , Medium ," $2,340.00 "
+Channel Partners,France, Montana , Medium ," $2,342.00 "
+Government,France, Paseo , Medium ," $1,031.00 "
+Midmarket,Canada, Velo , Medium ," $1,262.00 "
+Government,Canada, Velo , Medium ," $1,135.00 "
+Government,United States of America, Velo , Medium , $547.00 
+Government,Canada, Velo , Medium ," $1,582.00 "
+Channel Partners,France, VTT , Medium ," $1,738.50 "
+Channel Partners,Germany, VTT , Medium ," $2,215.00 "
+Government,Canada, VTT , Medium ," $1,582.00 "
+Government,Canada, Amarilla , Medium ," $1,135.00 "
+Government,United States of America, Carretera , Medium ," $1,761.00 "
+Small Business,France, Carretera , Medium , $448.00 
+Small Business,France, Carretera , Medium ," $2,181.00 "
+Government,France, Montana , Medium ," $1,976.00 "
+Small Business,France, Montana , Medium ," $2,181.00 "
+Enterprise,Germany, Montana , Medium ," $2,500.00 "
+Small Business,Canada, Paseo , Medium ," $1,702.00 "
+Small Business,France, Paseo , Medium , $448.00 
+Enterprise,Germany, Paseo , Medium ," $3,513.00 "
+Midmarket,France, Paseo , Medium ," $2,101.00 "
+Midmarket,United States of America, Paseo , Medium ," $2,931.00 "
+Government,France, Paseo , Medium ," $1,535.00 "
+Small Business,Germany, Paseo , Medium ," $1,123.00 "
+Small Business,Canada, Paseo , Medium ," $1,404.00 "
+Channel Partners,Mexico, Paseo , Medium ," $2,763.00 "
+Government,Germany, Paseo , Medium ," $2,125.00 "
+Small Business,France, Velo , Medium ," $1,659.00 "
+Government,Mexico, Velo , Medium , $609.00 
+Enterprise,Germany, Velo , Medium ," $2,087.00 "
+Government,France, Velo , Medium ," $1,976.00 "
+Government,United States of America, Velo , Medium ," $1,421.00 "
+Small Business,United States of America, Velo , Medium ," $1,372.00 "
+Government,Germany, Velo , Medium , $588.00 
+Channel Partners,Canada, VTT , Medium ," $3,244.50 "
+Small Business,France, VTT , Medium , $959.00 
+Small Business,Mexico, VTT , Medium ," $2,747.00 "
+Enterprise,Canada, Amarilla , Medium ," $1,645.00 "
+Government,France, Amarilla , Medium ," $2,876.00 "
+Enterprise,Germany, Amarilla , Medium , $994.00 
+Government,Canada, Amarilla , Medium ," $1,118.00 "
+Small Business,United States of America, Amarilla , Medium ," $1,372.00 "
+Government,Canada, Montana , Medium , $488.00 
+Government,United States of America, Montana , Medium ," $1,282.00 "
+Government,Canada, Paseo , Medium , $257.00 
+Government,United States of America, Amarilla , Medium ," $1,282.00 "
+Enterprise,Mexico, Carretera , Medium ," $1,540.00 "
+Midmarket,France, Carretera , Medium , $490.00 
+Government,Mexico, Carretera , Medium ," $1,362.00 "
+Midmarket,France, Montana , Medium ," $2,501.00 "
+Government,Canada, Montana , Medium , $708.00 
+Government,Germany, Montana , Medium , $645.00 
+Small Business,France, Montana , Medium ," $1,562.00 "
+Small Business,Canada, Montana , Medium ," $1,283.00 "
+Midmarket,Germany, Montana , Medium , $711.00 
+Enterprise,Mexico, Paseo , Medium ," $1,114.00 "
+Government,Germany, Paseo , Medium ," $1,259.00 "
+Government,Germany, Paseo , Medium ," $1,095.00 "
+Government,Germany, Paseo , Medium ," $1,366.00 "
+Small Business,Mexico, Paseo , Medium ," $2,460.00 "
+Government,United States of America, Paseo , Medium , $678.00 
+Government,Germany, Paseo , Medium ," $1,598.00 "
+Government,Germany, Paseo , Medium ," $2,409.00 "
+Government,Germany, Paseo , Medium ," $1,934.00 "
+Government,Mexico, Paseo , Medium ," $2,993.00 "
+Government,Germany, Paseo , Medium ," $2,146.00 "
+Government,Mexico, Paseo , Medium ," $1,946.00 "
+Government,Mexico, Paseo , Medium ," $1,362.00 "
+Channel Partners,Canada, Velo , Medium , $598.00 
+Government,United States of America, Velo , Medium ," $2,907.00 "
+Government,Germany, Velo , Medium ," $2,338.00 "
+Small Business,France, Velo , Medium , $386.00 
+Small Business,Mexico, Velo , Medium , $635.00 
+Government,France, VTT , Medium , $574.50 
+Government,Germany, VTT , Medium ," $2,338.00 "
+Government,France, VTT , Medium , $381.00 
+Government,Germany, VTT , Medium , $422.00 
+Small Business,Canada, VTT , Medium ," $2,134.00 "
+Small Business,United States of America, VTT , Medium , $808.00 
+Government,Canada, Amarilla , Medium , $708.00 
+Government,United States of America, Amarilla , Medium ," $2,907.00 "
+Government,Germany, Amarilla , Medium ," $1,366.00 "
+Small Business,Mexico, Amarilla , Medium ," $2,460.00 "
+Government,Germany, Amarilla , Medium ," $1,520.00 "
+Midmarket,Germany, Amarilla , Medium , $711.00 
+Channel Partners,Mexico, Amarilla , Medium ," $1,375.00 "
+Small Business,Mexico, Amarilla , Medium , $635.00 
+Government,United States of America, VTT , Medium , $436.50 
+Small Business,Canada, Carretera , Medium ," $1,094.00 "
+Channel Partners,Mexico, Carretera , Medium , $367.00 
+Small Business,Canada, Montana , Medium ," $3,802.50 "
+Government,France, Montana , Medium ," $1,666.00 "
+Small Business,France, Montana , Medium , $322.00 
+Channel Partners,Canada, Montana , Medium ," $2,321.00 "
+Enterprise,France, Montana , Medium ," $1,857.00 "
+Government,Canada, Montana , Medium ," $1,611.00 "
+Enterprise,United States of America, Montana , Medium ," $2,797.00 "
+Small Business,Germany, Montana , Medium , $334.00 
+Small Business,Mexico, Paseo , Medium ," $2,565.00 "
+Government,Mexico, Paseo , Medium ," $2,417.00 "
+Midmarket,United States of America, Paseo , Medium ," $3,675.00 "
+Small Business,Canada, Paseo , Medium ," $1,094.00 "
+Midmarket,France, Paseo , Medium ," $1,227.00 "
+Channel Partners,Mexico, Paseo , Medium , $367.00 
+Small Business,France, Paseo , Medium ," $1,324.00 "
+Channel Partners,Germany, Paseo , Medium ," $1,775.00 "
+Enterprise,United States of America, Paseo , Medium ," $2,797.00 "
+Midmarket,Mexico, Velo , Medium , $245.00 
+Small Business,Canada, Velo , Medium ," $3,793.50 "
+Government,Germany, Velo , Medium ," $1,307.00 "
+Enterprise,Canada, Velo , Medium , $567.00 
+Enterprise,Mexico, Velo , Medium ," $2,110.00 "
+Government,Canada, Velo , Medium ," $1,269.00 "
+Channel Partners,United States of America, VTT , Medium ," $1,956.00 "
+Small Business,Germany, VTT , Medium ," $2,659.00 "
+Government,United States of America, VTT , Medium ," $1,351.50 "
+Channel Partners,Germany, VTT , Medium , $880.00 
+Small Business,United States of America, VTT , Medium ," $1,867.00 "
+Channel Partners,France, VTT , Medium ," $2,234.00 "
+Midmarket,France, VTT , Medium ," $1,227.00 "
+Enterprise,Mexico, VTT , Medium , $877.00 
+Government,United States of America, Amarilla , Medium ," $2,071.00 "
+Government,Canada, Amarilla , Medium ," $1,269.00 "
+Midmarket,Germany, Amarilla , Medium , $970.00 
+Government,Mexico, Amarilla , Medium ," $1,694.00 "
+Government,Germany, Carretera , Medium , $663.00 
+Government,Canada, Carretera , Medium , $819.00 
+Channel Partners,Germany, Carretera , Medium ," $1,580.00 "
+Government,Mexico, Carretera , Medium , $521.00 
+Government,United States of America, Paseo , Medium , $973.00 
+Government,Mexico, Paseo , Medium ," $1,038.00 "
+Government,Germany, Paseo , Medium , $360.00 
+Channel Partners,France, Velo , Medium ," $1,967.00 "
+Midmarket,Mexico, Velo , Medium ," $2,628.00 "
+Government,Germany, VTT , Medium , $360.00 
+Government,France, VTT , Medium ," $2,682.00 "
+Government,Mexico, VTT , Medium , $521.00 
+Government,Mexico, Amarilla , Medium ," $1,038.00 "
+Midmarket,Canada, Amarilla , Medium ," $1,630.50 "
+Channel Partners,France, Amarilla , Medium , $306.00 
+Channel Partners,United States of America, Carretera , High , $386.00 
+Government,United States of America, Montana , High ," $2,328.00 "
+Channel Partners,United States of America, Paseo , High , $386.00 
+Enterprise,United States of America, Carretera , High ," $3,445.50 "
+Enterprise,France, Carretera , High ," $1,482.00 "
+Government,United States of America, Montana , High ," $2,313.00 "
+Enterprise,United States of America, Montana , High ," $1,804.00 "
+Midmarket,France, Montana , High ," $2,072.00 "
+Government,France, Paseo , High ," $1,954.00 "
+Small Business,Mexico, Paseo , High , $591.00 
+Midmarket,France, Paseo , High ," $2,167.00 "
+Government,Germany, Paseo , High , $241.00 
+Midmarket,Germany, Velo , High , $681.00 
+Midmarket,Germany, Velo , High , $510.00 
+Midmarket,United States of America, Velo , High , $790.00 
+Government,France, Velo , High , $639.00 
+Enterprise,United States of America, Velo , High ," $1,596.00 "
+Small Business,United States of America, Velo , High ," $2,294.00 "
+Government,Germany, Velo , High , $241.00 
+Government,Germany, Velo , High ," $2,665.00 "
+Enterprise,Canada, Velo , High ," $1,916.00 "
+Small Business,France, Velo , High , $853.00 
+Enterprise,Mexico, VTT , High , $341.00 
+Midmarket,Mexico, VTT , High , $641.00 
+Government,United States of America, VTT , High ," $2,807.00 "
+Small Business,Mexico, VTT , High , $432.00 
+Small Business,United States of America, VTT , High ," $2,294.00 "
+Midmarket,France, VTT , High ," $2,167.00 "
+Enterprise,Canada, VTT , High ," $2,529.00 "
+Government,Germany, VTT , High ," $1,870.00 "
+Enterprise,United States of America, Amarilla , High , $579.00 
+Government,Canada, Amarilla , High ," $2,240.00 "
+Small Business,United States of America, Amarilla , High ," $2,993.00 "
+Channel Partners,Canada, Amarilla , High ," $3,520.50 "
+Government,Mexico, Amarilla , High ," $2,039.00 "
+Channel Partners,Germany, Amarilla , High ," $2,574.00 "
+Government,Canada, Amarilla , High , $707.00 
+Midmarket,France, Amarilla , High ," $2,072.00 "
+Small Business,France, Amarilla , High , $853.00 
+Channel Partners,France, Carretera , High ," $1,198.00 "
+Government,France, Paseo , High ," $2,532.00 "
+Channel Partners,France, Paseo , High ," $1,198.00 "
+Midmarket,Canada, Velo , High , $384.00 
+Channel Partners,Germany, Velo , High , $472.00 
+Government,United States of America, VTT , High ," $1,579.00 "
+Channel Partners,Mexico, VTT , High ," $1,005.00 "
+Midmarket,United States of America, Amarilla , High ," $3,199.50 "
+Channel Partners,Germany, Amarilla , High , $472.00 
+Channel Partners,Canada, Carretera , High ," $1,937.00 "
+Government,Germany, Carretera , High , $792.00 
+Small Business,Germany, Carretera , High ," $2,811.00 "
+Enterprise,France, Carretera , High ," $2,441.00 "
+Midmarket,Canada, Carretera , High ," $1,560.00 "
+Government,Mexico, Carretera , High ," $2,706.00 "
+Government,Germany, Montana , High , $766.00 
+Government,Germany, Montana , High ," $2,992.00 "
+Midmarket,Mexico, Montana , High ," $2,157.00 "
+Small Business,Canada, Paseo , High , $873.00 
+Government,Mexico, Paseo , High ," $1,122.00 "
+Government,Canada, Paseo , High ," $2,104.50 "
+Channel Partners,Canada, Paseo , High ," $4,026.00 "
+Channel Partners,France, Paseo , High ," $2,425.50 "
+Government,Canada, Paseo , High ," $2,394.00 "
+Midmarket,Mexico, Paseo , High ," $1,984.00 "
+Enterprise,France, Paseo , High ," $2,441.00 "
+Government,Germany, Paseo , High ," $2,992.00 "
+Small Business,Canada, Paseo , High ," $1,366.00 "
+Government,France, Velo , High ," $2,805.00 "
+Midmarket,Mexico, Velo , High , $655.00 
+Government,Mexico, Velo , High , $344.00 
+Government,Canada, Velo , High ," $1,808.00 "
+Channel Partners,France, VTT , High ," $1,734.00 "
+Enterprise,Mexico, VTT , High , $554.00 
+Government,Canada, VTT , High ," $2,935.00 "
+Enterprise,Germany, Amarilla , High ," $3,165.00 "
+Government,Mexico, Amarilla , High ," $2,629.00 "
+Enterprise,France, Amarilla , High ," $1,433.00 "
+Enterprise,Mexico, Amarilla , High , $947.00 
+Government,Mexico, Amarilla , High , $344.00 
+Midmarket,Mexico, Amarilla , High ," $2,157.00 "
+Government,United States of America, Paseo , High , $380.00 
+Government,Mexico, Carretera , High , $886.00 
+Enterprise,Canada, Carretera , High ," $2,416.00 "
+Enterprise,Mexico, Carretera , High ," $2,156.00 "
+Midmarket,Canada, Carretera , High ," $2,689.00 "
+Midmarket,United States of America, Montana , High , $677.00 
+Small Business,France, Montana , High ," $1,773.00 "
+Government,Mexico, Montana , High ," $2,420.00 "
+Government,Canada, Montana , High ," $2,734.00 "
+Government,Mexico, Montana , High ," $1,715.00 "
+Small Business,France, Montana , High ," $1,186.00 "
+Small Business,United States of America, Paseo , High ," $3,495.00 "
+Government,Mexico, Paseo , High , $886.00 
+Enterprise,Mexico, Paseo , High ," $2,156.00 "
+Government,Mexico, Paseo , High , $905.00 
+Government,Mexico, Paseo , High ," $1,715.00 "
+Government,France, Paseo , High ," $1,594.00 "
+Small Business,Germany, Paseo , High ," $1,359.00 "
+Small Business,Mexico, Paseo , High ," $2,150.00 "
+Government,Mexico, Paseo , High ," $1,197.00 "
+Midmarket,Mexico, Paseo , High , $380.00 
+Government,Mexico, Paseo , High ," $1,233.00 "
+Government,Mexico, Velo , High ," $1,395.00 "
+Government,United States of America, Velo , High , $986.00 
+Government,Mexico, Velo , High , $905.00 
+Channel Partners,Canada, VTT , High ," $2,109.00 "
+Midmarket,France, VTT , High ," $3,874.50 "
+Government,Canada, VTT , High , $623.00 
+Government,United States of America, VTT , High , $986.00 
+Enterprise,United States of America, VTT , High ," $2,387.00 "
+Government,Mexico, VTT , High ," $1,233.00 "
+Government,United States of America, Amarilla , High , $270.00 
+Government,France, Amarilla , High ," $3,421.50 "
+Government,Canada, Amarilla , High ," $2,734.00 "
+Midmarket,United States of America, Amarilla , High ," $2,548.00 "
+Government,France, Carretera , High ," $2,521.50 "
+Channel Partners,Mexico, Montana , High ," $2,661.00 "
+Government,Germany, Paseo , High ," $1,531.00 "
+Government,France, VTT , High ," $1,491.00 "
+Government,Germany, VTT , High ," $1,531.00 "
+Channel Partners,Canada, Amarilla , High ," $2,761.00 "
+Midmarket,United States of America, Carretera , High ," $2,567.00 "
+Midmarket,United States of America, VTT , High ," $2,567.00 "
+Government,Canada, Carretera , High , $923.00 
+Government,France, Carretera , High ," $1,790.00 "
+Government,Germany, Carretera , High , $442.00 
+Government,United States of America, Montana , High , $982.50 
+Government,United States of America, Montana , High ," $1,298.00 "
+Channel Partners,Mexico, Montana , High , $604.00 
+Government,Mexico, Montana , High ," $2,255.00 "
+Government,Canada, Montana , High ," $1,249.00 "
+Government,United States of America, Paseo , High ," $1,438.50 "
+Small Business,Germany, Paseo , High , $807.00 
+Government,United States of America, Paseo , High ," $2,641.00 "
+Government,Germany, Paseo , High ," $2,708.00 "
+Government,Canada, Paseo , High ," $2,632.00 "
+Enterprise,Canada, Paseo , High ," $1,583.00 "
+Channel Partners,Mexico, Paseo , High , $571.00 
+Government,France, Paseo , High ," $2,696.00 "
+Midmarket,Canada, Paseo , High ," $1,565.00 "
+Government,Canada, Paseo , High ," $1,249.00 "
+Government,Germany, Paseo , High , $357.00 
+Channel Partners,Germany, Paseo , High ," $1,013.00 "
+Midmarket,France, Velo , High ," $3,997.50 "
+Government,Canada, Velo , High ," $2,632.00 "
+Government,France, Velo , High ," $1,190.00 "
+Channel Partners,Mexico, Velo , High , $604.00 
+Midmarket,Germany, Velo , High , $660.00 
+Channel Partners,Mexico, Velo , High , $410.00 
+Small Business,Mexico, Velo , High ," $2,605.00 "
+Channel Partners,Germany, Velo , High ," $1,013.00 "
+Enterprise,Canada, VTT , High ," $1,583.00 "
+Midmarket,Canada, VTT , High ," $1,565.00 "
+Enterprise,Canada, Amarilla , High ," $1,659.00 "
+Government,France, Amarilla , High ," $1,190.00 "
+Channel Partners,Mexico, Amarilla , High , $410.00 
+Channel Partners,Germany, Amarilla , High ," $1,770.00 "
+Government,Mexico, Carretera , High ," $2,579.00 "
+Government,United States of America, Carretera , High ," $1,743.00 "
+Government,United States of America, Carretera , High ," $2,996.00 "
+Government,Germany, Carretera , High , $280.00 
+Government,France, Montana , High , $293.00 
+Government,United States of America, Montana , High ," $2,996.00 "
+Midmarket,Germany, Paseo , High , $278.00 
+Government,Canada, Paseo , High ," $2,428.00 "
+Midmarket,United States of America, Paseo , High ," $1,767.00 "
+Channel Partners,France, Paseo , High ," $1,393.00 "
+Government,Germany, VTT , High , $280.00 
+Channel Partners,France, Amarilla , High ," $1,393.00 "
+Channel Partners,United States of America, Amarilla , High ," $2,015.00 "
+Small Business,Mexico, Carretera , High , $801.00 
+Enterprise,France, Carretera , High ," $1,023.00 "
+Small Business,Canada, Carretera , High ," $1,496.00 "
+Small Business,United States of America, Carretera , High ," $1,010.00 "
+Midmarket,Germany, Carretera , High ," $1,513.00 "
+Midmarket,Canada, Carretera , High ," $2,300.00 "
+Enterprise,Mexico, Carretera , High ," $2,821.00 "
+Government,Canada, Montana , High ," $2,227.50 "
+Government,Germany, Montana , High ," $1,199.00 "
+Government,Canada, Montana , High , $200.00 
+Government,Canada, Montana , High , $388.00 
+Government,Mexico, Montana , High ," $1,727.00 "
+Midmarket,Canada, Montana , High ," $2,300.00 "
+Government,Mexico, Paseo , High , $260.00 
+Midmarket,Canada, Paseo , High ," $2,470.00 "
+Midmarket,Canada, Paseo , High ," $1,743.00 "
+Channel Partners,United States of America, Paseo , High ," $2,914.00 "
+Government,France, Paseo , High ," $1,731.00 "
+Government,Canada, Paseo , High , $700.00 
+Channel Partners,Canada, Paseo , High ," $2,222.00 "
+Government,United States of America, Paseo , High ," $1,177.00 "
+Government,France, Paseo , High ," $1,922.00 "
+Enterprise,Mexico, Velo , High ," $1,575.00 "
+Government,United States of America, Velo , High , $606.00 
+Small Business,United States of America, Velo , High ," $2,460.00 "
+Small Business,Canada, Velo , High , $269.00 
+Small Business,Germany, Velo , High ," $2,536.00 "
+Government,Mexico, VTT , High ," $2,903.00 "
+Small Business,United States of America, VTT , High ," $2,541.00 "
+Small Business,Canada, VTT , High , $269.00 
+Small Business,Canada, VTT , High ," $1,496.00 "
+Small Business,United States of America, VTT , High ," $1,010.00 "
+Government,France, VTT , High ," $1,281.00 "
+Small Business,Canada, Amarilla , High , $888.00 
+Enterprise,United States of America, Amarilla , High ," $2,844.00 "
+Channel Partners,France, Amarilla , High ," $2,475.00 "
+Midmarket,Canada, Amarilla , High ," $1,743.00 "
+Channel Partners,United States of America, Amarilla , High ," $2,914.00 "
+Government,France, Amarilla , High ," $1,731.00 "
+Government,Mexico, Amarilla , High ," $1,727.00 "
+Midmarket,Mexico, Amarilla , High ," $1,870.00 "
+Enterprise,France, Carretera , High ," $1,174.00 "
+Enterprise,Germany, Carretera , High ," $2,767.00 "
+Enterprise,Germany, Carretera , High ," $1,085.00 "
+Small Business,Mexico, Montana , High , $546.00 
+Government,Germany, Paseo , High ," $1,158.00 "
+Midmarket,Canada, Paseo , High ," $1,614.00 "
+Government,Mexico, Paseo , High ," $2,535.00 "
+Government,Mexico, Paseo , High ," $2,851.00 "
+Midmarket,Canada, Paseo , High ," $2,559.00 "
+Government,United States of America, Paseo , High , $267.00 
+Enterprise,Germany, Paseo , High ," $1,085.00 "
+Midmarket,Germany, Paseo , High ," $1,175.00 "
+Government,United States of America, Paseo , High ," $2,007.00 "
+Government,Mexico, Paseo , High ," $2,151.00 "
+Channel Partners,United States of America, Paseo , High , $914.00 
+Government,France, Paseo , High , $293.00 
+Channel Partners,Mexico, Velo , High , $500.00 
+Midmarket,France, Velo , High ," $2,826.00 "
+Enterprise,France, Velo , High , $663.00 
+Small Business,United States of America, Velo , High ," $2,574.00 "
+Enterprise,United States of America, Velo , High ," $2,438.00 "
+Channel Partners,United States of America, Velo , High , $914.00 
+Government,Canada, VTT , High , $865.50 
+Midmarket,Germany, VTT , High , $492.00 
+Government,United States of America, VTT , High , $267.00 
+Midmarket,Germany, VTT , High ," $1,175.00 "
+Enterprise,Canada, VTT , High ," $2,954.00 "
+Enterprise,Germany, VTT , High , $552.00 
+Government,France, VTT , High , $293.00 
+Small Business,France, Amarilla , High ," $2,475.00 "
+Small Business,Mexico, Amarilla , High , $546.00 
+Government,Mexico, Montana , High ," $1,368.00 "
+Government,Canada, Paseo , High , $723.00 
+Channel Partners,United States of America, VTT , High ," $1,806.00 "

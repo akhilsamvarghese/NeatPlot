@@ -1,115 +1,142 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import re
 
 def process_data(df):
-    st.subheader("Data Processing")
+    
+    st.write(df.head(11))
+    # Step 1: Data Overview
+    st.subheader("1. Data Overview")
+    # st.write(df.head())
+    st.write("Original Data Shape:", df.shape)
+    st.write("Data Types:")
+    st.dataframe(df.dtypes,use_container_width=True, width=100)
+    st.write("Data Preview:")
 
-    option = st.selectbox("Select an option:", [
-        "Top 5 Records", "Shape of Data", "Null Values",
-        "Duplicates", "Data Types", "Summary Statistics",
-        "Unique Values"
-    ])
+    # Step 2: Select Columns
+    st.subheader("2. Select Columns")
+    selected_columns = st.multiselect("Select columns to keep:", df.columns.tolist(), default=df.columns.tolist())
+    df = df[selected_columns]
+    st.write("Selected Data Preview:")
+    st.write(df.head())
+    st.write("Selected Data Shape:", df.shape)
 
-    if option == "Top 5 Records":
-        show_top_records(df)
-    elif option == "Shape of Data":
-        show_data_shape(df)
-    elif option == "Null Values":
-        handle_null_values(df)
-    elif option == "Duplicates":
-        handle_duplicates(df)
-    elif option == "Data Types":
-        handle_datatypes(df)
-    elif option == "Summary Statistics":
-        show_summary_statistics(df)
-    elif option == "Unique Values":
-        show_unique_values(df)
+    # Step 3: Handle Missing Values
+    st.subheader("3. Handle Missing Values")
+    df = handle_missing_values(df)
+
+    # Step 4: Convert Data Types
+    st.subheader("4. Convert Data Types")
+    df = convert_data_types(df)
+
+    # Step 5: Remove Special Characters
+    st.subheader("5. Remove Special Characters")
+    df = remove_special_characters(df)
+
+    # Final Step: Display Processed Data
+    st.subheader("Final Processed Data")
+    st.write(df.head())
+    st.write("Final Data Shape:", df.shape)
 
     return df
 
-def show_top_records(df):
-    st.write("Top 5 Records:")
-    st.write(df.head())
+def handle_missing_values(df):
+    st.write("Columns with missing values:")
+    missing = df.isnull().sum()
+    missing_cols = missing[missing > 0]
+    st.write(missing_cols)
 
-def show_data_shape(df):
-    st.write(f"Shape of the DataFrame: {df.shape}")
-    st.write(f"Number of rows: {df.shape[0]}")
-    st.write(f"Number of columns: {df.shape[1]}")
-
-def handle_null_values(df):
-    st.write("Null Values:")
-    null_counts = df.isnull().sum()
-    st.write(null_counts)
-    
-    if null_counts.sum() > 0:
-        st.write("Options to handle null values:")
-        null_handling = st.radio("Choose an option:", ["Drop rows with null values", "Fill null values"])
+    if not missing_cols.empty:
+        columns_to_drop = st.multiselect("Select columns to drop (if any):", missing_cols.index.tolist())
         
-        if null_handling == "Drop rows with null values":
-            df_cleaned = df.dropna()
-            st.write(f"Rows remaining after dropping null values: {len(df_cleaned)}")
-        else:
-            fill_method = st.selectbox("Choose fill method:", ["Mean", "Median", "Mode", "Custom value"])
-            if fill_method == "Custom value":
-                fill_value = st.text_input("Enter custom value:")
-            else:
-                fill_value = None
-            
-            for column in df.columns[df.isnull().any()]:
-                if pd.api.types.is_numeric_dtype(df[column]):
-                    if fill_method == "Mean":
-                        df[column].fillna(df[column].mean(), inplace=True)
-                    elif fill_method == "Median":
-                        df[column].fillna(df[column].median(), inplace=True)
-                    elif fill_method == "Mode":
-                        df[column].fillna(df[column].mode()[0], inplace=True)
-                    else:
-                        df[column].fillna(fill_value, inplace=True)
-                else:
-                    if fill_method == "Mode":
-                        df[column].fillna(df[column].mode()[0], inplace=True)
-                    else:
-                        df[column].fillna(fill_value, inplace=True)
-        
-        st.write("Null values after handling:")
-        st.write(df.isnull().sum())
+        if columns_to_drop:
+            df = df.drop(columns=columns_to_drop)
+            st.write(f"Dropped columns: {', '.join(columns_to_drop)}")
 
-def handle_duplicates(df):
-    st.write(f"Number of duplicate rows: {df.duplicated().sum()}")
-    if df.duplicated().sum() > 0:
-        remove_duplicates = st.checkbox("Remove duplicate rows")
-        if remove_duplicates:
-            df.drop_duplicates(inplace=True)
-            st.write(f"Rows remaining after removing duplicates: {len(df)}")
+        remaining_missing = df.isnull().sum()
+        remaining_missing_cols = remaining_missing[remaining_missing > 0]
 
-def handle_datatypes(df):
-    st.write("Data Types:")
-    st.write(df.dtypes)
-    
-    columns_to_change = st.multiselect("Select columns to change data type:", df.columns)
-    for column in columns_to_change:
-        new_type = st.selectbox(f"New data type for {column}:", ["int64", "float64", "object", "datetime64"])
+        if not remaining_missing_cols.empty:
+            st.write("Remaining columns with missing values:")
+            st.write(remaining_missing_cols)
+
+            method = st.radio("Choose method to handle remaining missing values:", 
+                              ["Drop rows", "Fill with mean/mode", "Fill with median"])
+
+            if method == "Drop rows":
+                df = df.dropna()
+                st.write("Rows with missing values have been dropped.")
+            elif method == "Fill with mean/mode":
+                for col in remaining_missing_cols.index:
+                    if df[col].dtype in ['int64', 'float64']:
+                        df[col].fillna(df[col].mean(), inplace=True)
+                    else:
+                        df[col].fillna(df[col].mode()[0], inplace=True)
+                st.write("Missing values have been filled with mean/mode.")
+            elif method == "Fill with median":
+                for col in remaining_missing_cols.index:
+                    if df[col].dtype in ['int64', 'float64']:
+                        df[col].fillna(df[col].median(), inplace=True)
+                    else:
+                        df[col].fillna(df[col].mode()[0], inplace=True)
+                st.write("Missing values have been filled with median.")
+
+    st.write("Missing values after handling:")
+    st.dataframe(df.isnull().sum(), use_container_width=True, height=500, width=100)
+    return df
+
+def convert_data_types(df):
+    st.write("Current data types:")
+    st.dataframe(df.dtypes, use_container_width=True, height=500, width=100)
+
+    columns_to_convert = st.multiselect("Select columns to convert:", df.columns.tolist())
+
+    for column in columns_to_convert:
+        new_type = st.selectbox(f"Select new data type for {column}:", ["int", "float", "string", "datetime"], key=f"dtype_{column}")
+
         try:
-            if new_type == "datetime64":
+            if new_type == "int":
+                df[column] = df[column].astype(int)
+            elif new_type == "float":
+                df[column] = df[column].astype(float)
+            elif new_type == "string":
+                df[column] = df[column].astype(str)
+            elif new_type == "datetime":
                 df[column] = pd.to_datetime(df[column])
-            else:
-                df[column] = df[column].astype(new_type)
-            st.success(f"Changed data type of {column} to {new_type}")
-        except:
-            st.error(f"Could not change data type of {column} to {new_type}")
+            st.success(f"Successfully converted {column} to {new_type}")
+        except Exception as e:
+            st.error(f"Error converting data type for {column}: {str(e)}")
 
-def show_summary_statistics(df):
-    st.write("Summary Statistics:")
-    st.write(df.describe())
+    st.write("Updated data types:")
+    st.dataframe(df.dtypes, use_container_width=True, height=500, width=100)
+    return df
 
-def show_unique_values(df):
-    column = st.selectbox("Select a column to see unique values:", df.columns)
-    unique_values = df[column].nunique()
-    st.write(f"Number of unique values in {column}: {unique_values}")
-    if unique_values <= 20:  # Limit to avoid overwhelming display
-        st.write("Unique values:")
-        st.write(df[column].unique())
+
+
+def remove_special_characters(df):
+    st.write("Select columns to remove special characters:")
+    string_columns = df.select_dtypes(include=['object']).columns
+    columns_to_clean = st.multiselect("Choose columns:", string_columns)
+
+    if columns_to_clean:
+        special_chars = st.text_input("Enter special characters to remove (leave empty to remove all non-alphanumeric):", 
+                                      value="!@#$%^&*()_+-={}[]|\\:;\"'<>,?/~`")
+        
+        if special_chars:
+            pattern = f'[{re.escape(special_chars)}]'
+        else:
+            pattern = '[^a-zA-Z0-9\s]'
+        
+        for column in columns_to_clean:
+            df[column] = df[column].astype(str).apply(lambda x: re.sub(pattern, '', x))
+            st.write(f"Removed special characters from {column}")
+        
+        st.write("Preview after removing special characters:")
+        st.write(df[columns_to_clean].head())
     else:
-        st.write("Too many unique values to display. Here's a sample:")
-        st.write(df[column].sample(20).unique())
+        st.write("No columns selected for special character removal.")
+
+    return df
+
+

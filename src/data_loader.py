@@ -19,9 +19,6 @@ def load_data():
         st.write("Preview of the data:")
         st.write(data.head())
         
-        # Column selection
-        data = select_columns(data)
-        
         # Option to save the uploaded file
         if st.button("Save Uploaded File"):
             saved_filename = save_uploaded_file(data)
@@ -57,7 +54,6 @@ def load_saved_file():
         st.warning("No saved files found.")
         return None
 
-
     # Let user select a file
     selected_file = st.selectbox("Choose a file to load", saved_files)
 
@@ -67,33 +63,11 @@ def load_saved_file():
 
         # Display the first few rows of the data
         st.write("Preview of the data:")
-        st.write(data.head())   
-        
-        # Column selection
-        data = select_columns(data)
+        st.write(data.head())
         
         return data
 
     return None
-
-def select_columns(df):
-    st.subheader("Select Columns")
-    
-    select_all = ["Select All"]
-    full_columns = select_all + df.columns.tolist()
-    
-    columns = st.multiselect("Select the columns", full_columns)
-    
-    if "Select All" in columns or not columns:
-        selected_df = df
-    else:
-        selected_df = df[columns]
-    
-    # Display the DataFrame
-    st.write("Preview of selected data:")
-    st.dataframe(selected_df.head(), use_container_width=True)
-    
-    return selected_df
 
 # Initialize session state
 def init_session_state():

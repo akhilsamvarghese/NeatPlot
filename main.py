@@ -4,7 +4,7 @@ from src.data_loader import load_data, load_saved_file, init_session_state, list
 from src.data_processor import process_data
 
 # Set page config at the very beginning
-st.set_page_config(page_title="Data Science App", page_icon="🧊", layout="wide")
+st.set_page_config(page_title="NeatPlot", page_icon="📊", layout="wide")
 
 # Initialize session state
 init_session_state()
@@ -20,10 +20,19 @@ with st.sidebar:
         default_index=0,
     )
 
+# Common header function
+def display_header():
+    st.title("NeatPlot")
+    st.markdown("*Your all-in-one solution for data science workflows*")
+    st.markdown("---")
+
 # Main app logic
 def main():
+    # Display the common header
+    display_header()
+
     if selected == "Getting Data":
-        st.title("Data Loading")
+        st.header("Data Loading")
         # Option to upload new file or load saved file
         data_source = st.radio("Choose data source", ["Upload New File", "Load Saved File"])
         if data_source == "Upload New File":
@@ -42,14 +51,14 @@ def main():
             st.success("Data loaded successfully!")
 
     elif selected == "Processing Data":
-        st.title("Data Processing")
+        st.header("Data Preprocessing")
         if st.session_state.data is not None:
             st.session_state.data = process_data(st.session_state.data)
         else:
             st.warning("Please load data first.")
 
     elif selected == "Visualise Data":
-        st.title("Data Visualization")
+        st.header("Data Visualization")
         if st.session_state.data is not None:
             # Add your data visualization logic here
             st.write("Visualization placeholder")
@@ -57,7 +66,7 @@ def main():
             st.warning("Please load and process data first.")
 
     elif selected == "Feature Engineering":
-        st.title("Feature Engineering")
+        st.header("Feature Engineering")
         if st.session_state.data is not None:
             # Add your feature engineering logic here
             st.write(st.session_state.data.head())
