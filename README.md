@@ -1,6 +1,7 @@
 # NeatPlot: Your Data Science Companion
-![NeatPlot Image](https://drive.google.com/uc?id=1G32R1641cvkd164I19ftM3GDtFv86b5g)
 
+
+![NeatPlot Image](<assets/Screenshot 2024-10-08 at 5.06.04 AM.png>)
 
 ## Overview
 
