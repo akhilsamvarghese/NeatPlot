@@ -1,4 +1,6 @@
 # NeatPlot: Your Data Science Companion
+![NeatPlot Image](https://drive.google.com/uc?id=1G32R1641cvkd164I19ftM3GDtFv86b5g)
+
 
 ## Overview
 
