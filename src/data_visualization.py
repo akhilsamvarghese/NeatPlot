@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def visualize_data(df):
-    st.header("Data Visualization")
+    # st.header("Data Visualization")
 
     if df is None or df.empty:
         st.warning("No data available for visualization. Please load and process data first.")
