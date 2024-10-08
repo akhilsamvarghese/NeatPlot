@@ -6,3 +6,4 @@ seaborn==0.13.0
 plotly==5.18.0
 openpyxl==3.1.2
 chardet==5.2.0
+streamlit-option-menu==0.3.12
