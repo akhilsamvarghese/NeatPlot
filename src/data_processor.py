@@ -2,21 +2,16 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import re
-import os
 from datetime import datetime
 
-EXPORT_DIRECTORY = "cleaned_data"
-
 def process_data(df):
-    
+    st.write(df.head(11))
     # Step 1: Data Overview
     st.subheader("1. Data Overview")
-    st.write("Data Preview:")
-    st.write(df.head(11))
-    # st.write(df.head())
     st.write("Original Data Shape:", df.shape)
     st.write("Data Types:")
     st.dataframe(df.dtypes,use_container_width=True, width=100)
+    st.write("Data Preview:")
 
     # Step 2: Select Columns
     st.subheader("2. Select Columns")
@@ -43,12 +38,15 @@ def process_data(df):
     st.write(df.head())
     st.write("Final Data Shape:", df.shape)
 
-
-# Add export button
-    if st.button("Export Cleaned Data"):
-        saved_file = export_to_csv(df)
-        st.success(f"Cleaned data saved as {saved_file}")
-        st.write(f"[Download the cleaned data](./{EXPORT_DIRECTORY}/{saved_file})")
+    # Add download button
+    if st.button("Download Cleaned Data"):
+        csv = df.to_csv(index=False)
+        st.download_button(
+            label="Download CSV",
+            data=csv,
+            file_name=f"cleaned_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+            mime="text/csv",
+        )
 
     return df
 
@@ -123,8 +121,6 @@ def convert_data_types(df):
     st.dataframe(df.dtypes, use_container_width=True, height=500, width=100)
     return df
 
-
-
 def remove_special_characters(df):
     st.write("Select columns to remove special characters:")
     string_columns = df.select_dtypes(include=['object']).columns
@@ -149,20 +145,3 @@ def remove_special_characters(df):
         st.write("No columns selected for special character removal.")
 
     return df
-
-
-
-def export_to_csv(df):
-    # Create a 'cleaned_data' directory if it doesn't exist
-    if not os.path.exists(EXPORT_DIRECTORY):
-        os.makedirs(EXPORT_DIRECTORY)
-    
-    # Generate a unique filename using timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    file_name = f"cleaned_data_{timestamp}.csv"
-    file_path = os.path.join(EXPORT_DIRECTORY, file_name)
-    
-    # Save the file as a CSV
-    df.to_csv(file_path, index=False)
-    
-    return file_name
