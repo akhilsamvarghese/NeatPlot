@@ -144,4 +144,4 @@ def remove_special_characters(df):
     else:
         st.write("No columns selected for special character removal.")
 
-    return df
+    return df #a
