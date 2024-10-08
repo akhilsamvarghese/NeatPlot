@@ -1,7 +1,7 @@
 # NeatPlot: Your Data Science Companion
 
 
-![NeatPlot Image](<assets/Screenshot 2024-10-08 at 5.06.04 AM.png>)
+![NeatPlot Image](</assets/Screenshot 2024-10-08 at 12.05.06 PM.png>)
 
 ## Overview
 
