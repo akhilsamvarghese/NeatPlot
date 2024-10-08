@@ -10,7 +10,7 @@ NeatPlot is an all-in-one solution for data science workflows, providing a user-
 ## Features
 
 - **Data Loading**: 
-  - Upload new CSV files
+  - Upload new CSV, Excel (XLSX, XLS), and JSON files
   - Load previously saved files
   - Automatic encoding detection for CSV files
 
