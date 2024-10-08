@@ -104,6 +104,19 @@ st.markdown("""
     .sidebar .sidebar-content {
         background-color: #f0f9ff;
     }
+            
+    /* Footer Styles */
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8fafc;
+        color: #4b5563;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.875rem;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -133,8 +146,7 @@ with st.sidebar:
             },
             "nav-link-selected": {"background-color": "#3b82f6", "color": "white", "font-weight": "600"},
         }
-    )
-
+    )    
 # Main app logic
 def main():
     st.markdown("<h1 style='text-align: center; color: #1e40af;'>📈 NeatPlot</h1>", unsafe_allow_html=True)
@@ -187,6 +199,19 @@ def main():
             st.dataframe(st.session_state.data.head(), use_container_width=True)
         else:
             st.warning("Please load and process data first.")
+
+
+
+# Footer
+    st.markdown(
+        """
+        <div class="footer">
+            Made with 🖤 by Akhil Sam Varghese
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
 
 if __name__ == "__main__":
     main()
