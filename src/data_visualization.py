@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def visualize_data(df):
-    # st.header("Data Visualization")
+    
 
     if df is None or df.empty:
         st.warning("No data available for visualization. Please load and process data first.")
@@ -103,15 +103,22 @@ def show_univariate_bar_chart(df):
         y=data.values,
         marker_color='lightblue',
         marker_line_color='darkblue',
-        marker_line_width=1.5
+        marker_line_width=1.5,
+        opacity=0.8
     )])
     
     fig.update_layout(
         title=f"Bar Chart of {column}",
         xaxis_title=column,
         yaxis_title="Count",
-        bargap=0.2
+        bargap=0.2,
+        plot_bgcolor='white',
+        paper_bgcolor='white',
+        font=dict(size=12)
     )
+    
+    fig.update_xaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
+    fig.update_yaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
     
     st.plotly_chart(fig)
 
@@ -122,11 +129,9 @@ def show_scatter_plot(df):
     x_axis = st.selectbox("Select X-axis", numeric_columns, index=0)
     y_axis = st.selectbox("Select Y-axis", numeric_columns, index=min(1, len(numeric_columns)-1))
     
-    # Add color palette selection
     color_palettes = ["Viridis", "Cividis", "Plasma", "Inferno", "Magma", "Turbo", "Jet", "Rainbow", "Portland", "Bluered", "Electric"]
     selected_palette = st.selectbox("Select color palette", color_palettes)
     
-    # Use Y-axis for color gradient
     fig = px.scatter(df, x=x_axis, y=y_axis, color=df[y_axis], 
                      color_continuous_scale=selected_palette, 
                      title=f"{y_axis} vs {x_axis} with Gradient on Y-axis")
@@ -144,13 +149,12 @@ def show_correlation_heatmap(df):
     
     corr_matrix = df[selected_columns].corr()
 
-    # Create a larger heatmap by setting height and width
     fig = px.imshow(corr_matrix, 
                     text_auto=True, 
                     aspect="auto", 
                     title="Correlation Heatmap",
-                    width=900,  # Increase the width
-                    height=700)  # Increase the height
+                    width=900,
+                    height=700)
     
     st.plotly_chart(fig)
 
@@ -180,15 +184,22 @@ def show_bivariate_bar_chart(df):
         y=data.values,
         marker_color='lightgreen',
         marker_line_color='darkgreen',
-        marker_line_width=1.5
+        marker_line_width=1.5,
+        opacity=0.8
     )])
     
     fig.update_layout(
         title=f"Bar Chart of {y_column} by {x_column}",
         xaxis_title=x_column,
         yaxis_title=f"Average {y_column}",
-        bargap=0.2
+        bargap=0.2,
+        plot_bgcolor='white',
+        paper_bgcolor='white',
+        font=dict(size=12)
     )
+    
+    fig.update_xaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
+    fig.update_yaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
     
     st.plotly_chart(fig)
 
@@ -204,14 +215,11 @@ def show_3d_scatter_plot(df):
     y_axis = st.selectbox("Select Y-axis", numeric_columns, index=1)
     z_axis = st.selectbox("Select Z-axis", numeric_columns, index=2)
 
-    # Select a column for color mapping (gradient)
     color_column = st.selectbox("Select Color Column (for gradient)", numeric_columns, index=3)
     
-    # Add color palette selection
     color_palettes = ["Viridis", "Cividis", "Plasma", "Inferno", "Magma", "Turbo", "Jet", "Rainbow", "Portland", "Bluered", "Electric"]
     selected_palette = st.selectbox("Select color palette", color_palettes)
 
-    # Creating 3D scatter plot with color gradient
     fig = px.scatter_3d(df, x=x_axis, y=y_axis, z=z_axis, color=color_column,
                         color_continuous_scale=selected_palette,
                         title=f"3D Scatter Plot: {x_axis}, {y_axis}, {z_axis} (Color by {color_column})")

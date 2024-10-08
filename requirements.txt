@@ -6,3 +6,4 @@ plotly==5.10.0
 seaborn==0.12.2
 matplotlib==3.6.2
 streamlit-option-menu==0.3.0
+openpyxl
