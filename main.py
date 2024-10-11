@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 from src.data_loader import load_data, load_saved_file, init_session_state, list_saved_files
 from src.data_processor import process_data
 from src.data_visualization import visualize_data
-# from src.feature_engineering import custom_feature_engineering
+from src.feature_engineering import feature_engineering
 
 # Set page config at the very beginning
 st.set_page_config(page_title="NeatPlot", page_icon="📈", layout="wide")

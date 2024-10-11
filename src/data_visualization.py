@@ -7,8 +7,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def visualize_data(df):
-    
-
     if df is None or df.empty:
         st.warning("No data available for visualization. Please load and process data first.")
         return
@@ -47,7 +45,7 @@ def bivariate_analysis(df):
     st.subheader("Bivariate Analysis")
     
     analysis_type = st.selectbox("Select Analysis Type", 
-                                 ["Scatter Plot", "Correlation Heatmap", "Group Box Plot", "Bar Chart"])
+                                 ["Scatter Plot", "Correlation Heatmap", "Group Box Plot", "Bar Chart", "Line Plot"])
     
     if analysis_type == "Scatter Plot":
         show_scatter_plot(df)
@@ -57,6 +55,8 @@ def bivariate_analysis(df):
         show_group_box_plot(df)
     elif analysis_type == "Bar Chart":
         show_bivariate_bar_chart(df)
+    elif analysis_type == "Line Plot":
+        show_line_plot(df)
 
 def show_summary_statistics(df):
     st.write("Summary Statistics")
@@ -72,21 +72,21 @@ def show_histogram(df):
     column = st.selectbox("Select a column", numeric_columns)
     bins = st.slider("Number of bins", min_value=5, max_value=100, value=30)
     fig = px.histogram(df, x=column, nbins=bins, title=f"Histogram of {column}")
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
 
 def show_box_plot(df):
     st.write("Box Plot")
     numeric_columns = df.select_dtypes(include=[np.number]).columns.tolist()
     column = st.selectbox("Select a column", numeric_columns)
     fig = px.box(df, y=column, title=f"Box Plot of {column}")
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
 
 def show_violin_plot(df):
     st.write("Violin Plot")
     numeric_columns = df.select_dtypes(include=[np.number]).columns.tolist()
     column = st.selectbox("Select a column", numeric_columns)
     fig = px.violin(df, y=column, box=True, points="all", title=f"Violin Plot of {column}")
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
 
 def show_univariate_bar_chart(df):
     st.write("Univariate Bar Chart")
@@ -120,7 +120,7 @@ def show_univariate_bar_chart(df):
     fig.update_xaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
     fig.update_yaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
     
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
 
 def show_scatter_plot(df):
     st.write("Scatter Plot")
@@ -136,7 +136,7 @@ def show_scatter_plot(df):
                      color_continuous_scale=selected_palette, 
                      title=f"{y_axis} vs {x_axis} with Gradient on Y-axis")
     
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
 
 def show_correlation_heatmap(df):
     st.write("Correlation Heatmap")
@@ -153,8 +153,8 @@ def show_correlation_heatmap(df):
                     text_auto=True, 
                     aspect="auto", 
                     title="Correlation Heatmap",
-                    width=900,
-                    height=700)
+                    width=1000,
+                    height=800)
     
     st.plotly_chart(fig)
 
@@ -167,7 +167,7 @@ def show_group_box_plot(df):
     x_column = st.selectbox("Select X-axis (categorical column)", categorical_columns)
     
     fig = px.box(df, x=x_column, y=y_column, title=f"Box Plot of {y_column} grouped by {x_column}")
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
 
 def show_bivariate_bar_chart(df):
     st.write("Bivariate Bar Chart")
@@ -201,7 +201,37 @@ def show_bivariate_bar_chart(df):
     fig.update_xaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
     fig.update_yaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
     
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
+
+def show_line_plot(df):
+    st.write("Line Plot")
+    numeric_columns = df.select_dtypes(include=[np.number]).columns.tolist()
+    categorical_columns = df.select_dtypes(include=['object', 'category']).columns.tolist()
+    
+    x_column = st.selectbox("Select X-axis", df.columns.tolist())
+    y_column = st.selectbox("Select Y-axis", numeric_columns)
+    
+    if df[x_column].dtype in ['int64', 'float64']:
+        # If X-axis is numeric, sort the data
+        data = df.sort_values(x_column)
+    else:
+        # If X-axis is categorical, group by X and calculate mean of Y
+        data = df.groupby(x_column)[y_column].mean().reset_index()
+    
+    fig = px.line(data, x=x_column, y=y_column, title=f"Line Plot of {y_column} vs {x_column}")
+    
+    fig.update_layout(
+        xaxis_title=x_column,
+        yaxis_title=y_column,
+        plot_bgcolor='white',
+        paper_bgcolor='white',
+        font=dict(size=12)
+    )
+    
+    fig.update_xaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
+    fig.update_yaxes(showline=True, linewidth=2, linecolor='lightgray', gridcolor='lightgray')
+    
+    st.plotly_chart(fig, width=800, height=600)
 
 def show_3d_scatter_plot(df):
     st.write("3D Scatter Plot")
@@ -224,4 +254,7 @@ def show_3d_scatter_plot(df):
                         color_continuous_scale=selected_palette,
                         title=f"3D Scatter Plot: {x_axis}, {y_axis}, {z_axis} (Color by {color_column})")
 
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, width=800, height=600)
+
+def Component():
+    return None
