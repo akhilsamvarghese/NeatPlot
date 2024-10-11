@@ -192,14 +192,8 @@ def main():
         else:
             st.warning("Please load and process data first.")
 
-    elif selected == "Feature Engineering":
-        st.header("🛠️ Feature Engineering")
-        if st.session_state.data is not None:
-            st.info("Feature engineering options will be added soon!")
-            st.subheader("Current data preview")
-            st.dataframe(st.session_state.data.head(), use_container_width=True)
-        else:
-            st.warning("Please load and process data first.")
+    elif selected == "Feature Engineering  (Work in Progress)":
+        feature_engineering(st.session_state.data)
 
 
 
