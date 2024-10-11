@@ -130,7 +130,7 @@ with st.sidebar:
     st.markdown("<p style='color: #3b82f6; font-size: 1.2rem;'>Your Data Science Companion</p>", unsafe_allow_html=True)
     selected = option_menu(
         menu_title=None,
-        options=["Getting Data", "Processing Data", "Visualise Data", "Feature Engineering  (Work in Progress)"],
+        options=["Getting Data", "Processing Data", "Visualise Data", "Feature Engineering"],
         icons=['cloud-upload', 'list-task', 'bar-chart-fill', 'gear'],
         menu_icon="cast",
         default_index=0,
@@ -192,7 +192,7 @@ def main():
         else:
             st.warning("Please load and process data first.")
 
-    elif selected == "Feature Engineering  (Work in Progress)":
+    elif selected == "Feature Engineering":
         feature_engineering(st.session_state.data)
 
 
