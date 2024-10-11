@@ -126,8 +126,8 @@ init_session_state()
 
 # Sidebar navigation with option_menu
 with st.sidebar:
-    st.markdown("<h1 style='color: #1e40af; font-size: 2rem;'>📈 NeatPlot</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='color: #3b82f6; font-size: 1.2rem;'>Your Data Science Companion</p>", unsafe_allow_html=True)
+    st.markdown("<h1 style='color: #1e40af;'>📈 NeatPlot</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='color: #3b82f6; font-size: 1.1rem;'>Your Data Science Companion</p>", unsafe_allow_html=True)
     selected = option_menu(
         menu_title=None,
         options=["Getting Data", "Processing Data", "Visualise Data", "Feature Engineering"],
